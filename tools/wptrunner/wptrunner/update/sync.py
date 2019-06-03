@@ -149,7 +149,7 @@ class UpdateManifest(Step):
 
     def create(self, state):
         from manifest import manifest, update
-        update.update(state.sync["path"], state.test_manifest)
+        update.update(state.sync["path"], state.test_manifest, state.manifest_path)
         manifest.write(state.test_manifest, state.manifest_path)
 
 
